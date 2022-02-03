@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(img/gifmario2.gif);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    text-align: center;
+
+
+}
+
+#container {
+    width: 995px;
+    height: 495px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    border-radius: 10px;
+    background-image: url("img/mesa.jpg");
+
+}
+.card {
+    width: 160px;
+    height: 240px;
+    position:absolute;
+    border-radius: 10px;
+    perspective: 700px;
+}
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 1s;
+    backface-visibility: hidden;
+
+}
+.back{
+    background: url("img/verso-meia-colina.png");
+}
+
+.back.flipped{
+    transform: rotateY(180deg);
+}
+
+.front{
+    transform: rotateY(-180deg);
+}
+
+.front.flipped{
+    transform: rotateY(0deg);
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+    font-family: "Sofia", sans-serif;
+    font-weight: 100;
+}
+
+.card:hover{
+    box-shadow: 0 0 10px rgb(236, 147, 44);
+}
+
+.face.flipped.match{
+    box-shadow: 0 0 10px rgb(123, 235, 78);
+}
+
+
+#modalGameOver{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -2;
+}
+
+#imgGameOver{
+    margin-top: 100px;
+}
+
+#imgMatchSign{
+    position: relative;
+    top: 250px;
+    transition-property: top, opacity;
+    transition-duration: 1.5s;
+    opacity: 1;
+    z-index: -1;
+}
